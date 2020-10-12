@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\aleks\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\aleks\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Level Editor.205267561.00" t="ExcludeRecursive" />
+    <e p="C:\Users\aleks\Projects\TS Games\Level Editor" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="TroopEditor.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="CodeMonkey" t="Include">
+            <e p="Assets.cs" t="Include" />
+            <e p="CMDebug.cs" t="Include" />
+            <e p="MonoBehaviours" t="Include">
+              <e p="CameraFollow.cs" t="Include" />
+              <e p="CameraFollowSetup.cs" t="Include" />
+              <e p="ComponentActions.cs" t="Include" />
+              <e p="PositionRendererSorter.cs" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+            <e p="Utils" t="Include">
+              <e p="Button_Sprite.cs" t="Include" />
+              <e p="Button_UI.cs" t="Include" />
+              <e p="FunctionPeriodic.cs" t="Include" />
+              <e p="FunctionTimer.cs" t="Include" />
+              <e p="FunctionUpdater.cs" t="Include" />
+              <e p="UI_Bar.cs" t="Include" />
+              <e p="UI_BarMultiple.cs" t="Include" />
+              <e p="UI_Sprite.cs" t="Include" />
+              <e p="UI_TextComplex.cs" t="Include" />
+              <e p="UtilsClass.cs" t="Include" />
+              <e p="World_Bar.cs" t="Include" />
+              <e p="World_Mesh.cs" t="Include" />
+              <e p="World_Sprite.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Initializer.cs" t="Include" />
+          <e p="Saving" t="Include">
+            <e p="Saver.cs" t="Include" />
+          </e>
+          <e p="Scripts.asmdef" t="Include" />
+          <e p="Tilemaps" t="Include">
+            <e p="Cube.cs" t="Include" />
+            <e p="HexGrid.cs" t="Include" />
+            <e p="Terrain.cs" t="Include" />
+          </e>
+          <e p="Tools" t="Include">
+            <e p="CameraMover.cs" t="Include" />
+            <e p="TileSetter.cs" t="Include" />
+          </e>
+          <e p="Troops" t="Include">
+            <e p="BomberTemplate.cs" t="Include" />
+            <e p="FighterTemplate.cs" t="Include" />
+            <e p="TroopTemplate.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Tests" t="Include">
+          <e p="EditMode" t="Include">
+            <e p="ConversionTests.cs" t="Include" />
+            <e p="EditMode.asmdef" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="EditMode.csproj" t="IncludeRecursive" />
+      <e p="Level Editor.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Scripts.csproj" t="IncludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
