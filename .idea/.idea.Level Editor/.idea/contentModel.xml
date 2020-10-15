@@ -43,16 +43,21 @@
           <e p="Scripts.asmdef" t="Include" />
           <e p="Tilemaps" t="Include">
             <e p="Cube.cs" t="Include" />
+            <e p="GridBase.cs" t="Include" />
             <e p="HexGrid.cs" t="Include" />
             <e p="Terrain.cs" t="Include" />
+            <e p="TerrainGrid.cs" t="Include" />
+            <e p="TextGrid.cs" t="Include" />
           </e>
           <e p="Tools" t="Include">
             <e p="CameraMover.cs" t="Include" />
-            <e p="TileSetter.cs" t="Include" />
+            <e p="DesignTool.cs" t="Include" />
+            <e p="TerrainSetter.cs" t="Include" />
           </e>
           <e p="Troops" t="Include">
             <e p="BomberTemplate.cs" t="Include" />
             <e p="FighterTemplate.cs" t="Include" />
+            <e p="Troop.cs" t="Include" />
             <e p="TroopTemplate.cs" t="Include" />
           </e>
         </e>

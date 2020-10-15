@@ -1,7 +1,7 @@
 ﻿using GameDataStructures;
 using UnityEngine;
 
-namespace Scriptables
+namespace Troops
 {
     [CreateAssetMenu(fileName="New Fighter", menuName="Troops/Fighter")]
     public class FighterTemplate : TroopTemplate

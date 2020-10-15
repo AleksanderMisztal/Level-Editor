@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Scriptables;
+using Troops;
 using UnityEditor;
 using UnityEngine;
 
@@ -36,7 +36,7 @@ namespace Editor
 
             for (int h = fighter.health; h > 0; h--)
             {
-                fighter.sprites[h-1] = (Sprite) EditorGUILayout.ObjectField("Health = " + h, fighter.sprites[h-1], typeof(Sprite));
+                fighter.sprites[h-1] = (Sprite) EditorGUILayout.ObjectField("Health = " + h, fighter.sprites[h-1], typeof(Sprite), false);
                 if (fighter.sprites[h - 1] == null) continue;
                 while (maxSprites.Count < h) maxSprites.Add(null);
                 maxSprites[h - 1] = fighter.sprites[h - 1];

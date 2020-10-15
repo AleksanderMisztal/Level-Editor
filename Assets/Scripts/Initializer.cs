@@ -1,24 +1,46 @@
-﻿using Tilemaps;
+﻿using System;
+using Tilemaps;
 using Tools;
 using UnityEngine;
-using Terrain = Scriptables.Terrain;
 
 public class Initializer : MonoBehaviour
 {
-    [SerializeField] private Terrain terrain;
+    private DesignTool[] tools;
+    private int activeTool = 0;
         
-    private HexGrid<Terrain> grid;
+    public static GridBase grid;
     private new static Camera camera;
+    private const float cellSize = 10f;
+
+
+    private void Awake()
+    {
+        grid = new GridBase(10, 20, cellSize);
+    }
 
     private void Start()
     {
         camera = Camera.main;
-        grid = new HexGrid<Terrain>(100, 100, 10f);
-        FindObjectOfType<TileSetter>().Grid = grid;
+        tools = FindObjectsOfType<DesignTool>();
+        tools[0].Enabled = true;
+    }
+
+    public void NextTool()
+    {
+        tools[activeTool].Enabled = false;
+        tools[++activeTool].Enabled = true;
     }
 
     public static Vector3 GetMouseWorldPosition()
     {
-        return camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 wp = camera.ScreenToWorldPoint(Input.mousePosition);
+        wp.z = 0;
+        return wp;
+    }
+
+    public static Vector3 GetHexCenterWp()
+    {
+        Vector3 wp = GetMouseWorldPosition();
+        return Cube.ToCube(wp, cellSize).ToWorld(cellSize);
     }
 }

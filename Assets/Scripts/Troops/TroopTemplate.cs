@@ -2,7 +2,7 @@
 using GameDataStructures;
 using UnityEngine;
 
-namespace Scriptables
+namespace Troops
 {
     public abstract class TroopTemplate : ScriptableObject
     {
@@ -11,5 +11,7 @@ namespace Scriptables
         public int movePoints;
         public int health;
         public List<Sprite> sprites;
+
+        public Sprite Sprite => sprites[health - 1];
     }
 }

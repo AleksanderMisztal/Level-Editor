@@ -15,5 +15,5 @@ MonoBehaviour:
   movePoints: 5
   health: 2
   sprites:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: f20d94025af9fba44b28f04350e2ba48, type: 3}
+  - {fileID: 21300000, guid: 954563ee410aed8448fc7ab845e362a5, type: 3}
