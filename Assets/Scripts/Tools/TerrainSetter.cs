@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using CodeMonkey.Utils;
 using Saving;
 using Tilemaps;
 using UnityEngine;
@@ -11,10 +10,9 @@ namespace Tools
     {
         [SerializeField] private Terrain[] terrains;
         private int currentTerrainId;
-        public static Dictionary<string, Terrain> terrainByName = new Dictionary<string, Terrain>();
+        private static readonly Dictionary<string, Terrain> terrainByName = new Dictionary<string, Terrain>();
         
         private TerrainGrid terrainGrid;
-        private TextGrid textGrid;
 
         public static Terrain GetTerrain(string name)
         {
@@ -32,9 +30,7 @@ namespace Tools
         {
             foreach (Terrain terrain in terrains) 
                 terrainByName.Add(terrain.name, terrain);
-            
             terrainGrid = new TerrainGrid(Initializer.grid);
-            textGrid = new TextGrid(Initializer.grid);
         }
 
         protected void Update()
@@ -49,7 +45,7 @@ namespace Tools
 
             if (Input.GetMouseButtonDown(0))
             {
-                Vector3 mousePosition = Initializer.GetHexCenterWp();
+                Vector3 mousePosition = Initializer.GetMouseWorldPosition();
                 Terrain terrain = terrains[currentTerrainId];
                 
                 terrainGrid.SetTile(mousePosition, terrain);
@@ -58,7 +54,6 @@ namespace Tools
             if (Input.GetKeyDown(KeyCode.S))
             {
                 Saver.Save("terrainSave", terrainGrid.Dto());
-                Saver.Save("test123", Vector3.up);
             }
 
             if (Input.GetKeyDown(KeyCode.L))

@@ -5,9 +5,7 @@ namespace Tilemaps
 {
     public class TextGrid : HexGrid<TextMesh>
     {
-        public TextGrid(GridBase gridBase) : base(gridBase)
-        {
-        }
+        public TextGrid(GridBase gridBase) : base(gridBase) { }
 
         public void SetTile(int x, int y, string text)
         {

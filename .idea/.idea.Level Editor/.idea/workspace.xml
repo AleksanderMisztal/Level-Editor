@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f84b617d-22f9-4ff7-ba47-c2b2f1ce010d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Terrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Terrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TextGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TextGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/aleks/Projects/TS Games/Level Editor/Assets/Troops/B17.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/TroopEditor.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scriptables/BomberTemplate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Grid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/Saver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TileObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tests/Tests/EditMode/ConversionTests.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UtilsClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeMonkey/Utils/UtilsClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CodeMonkey/Utils/Button_UI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tests/EditMode/ConversionTests.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tests/EditMode/EditMode.asmdef" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/Terrain.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CodeMonkey/Utils/UtilsClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Mouse.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TileSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Cube.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/CameraMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/TroopEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Troops/TroopTemplate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Troops/Troop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/IRenderable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Tool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/DesignTool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TerrainGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Terrain.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TextGrid.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1igTW7dBRN1ELDTjuiaukfuaqhx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f84b617d-22f9-4ff7-ba47-c2b2f1ce010d" name="Default Changelist" comment="" />
+      <created>1602328275688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602328275688</updated>
+      <workItem from="1602328280153" duration="8443000" />
+      <workItem from="1602341864989" duration="7632000" />
+      <workItem from="1602515441104" duration="18868000" />
+      <workItem from="1602770116752" duration="7582000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1602526688119</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602526688120</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1602527135091</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602527135091</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Saving tiles works">
+      <created>1602777711576</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602777711576</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Saving tiles works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Saving tiles works" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="392" y="126" key="RiderGenerateDialog" timestamp="1602595457325">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="392" y="126" key="RiderGenerateDialog/0.0.1368.872@0.0.1368.872" timestamp="1602595457325" />
+    <state x="186" y="81" key="SettingsEditor" timestamp="1602593545605">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="186" y="81" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1602593545605" />
+    <state x="492" y="171" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1602527123237">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="492" y="171" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1368.872@0.0.1368.872" timestamp="1602527123237" />
+  </component>
+</project>
