@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BackgroundManager.cs" />
      <Compile Include="Assets\Scripts\CodeMonkey\Assets.cs" />
      <Compile Include="Assets\Scripts\CodeMonkey\CMDebug.cs" />
      <Compile Include="Assets\Scripts\CodeMonkey\MonoBehaviours\CameraFollow.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\CodeMonkey\Utils\World_Mesh.cs" />
      <Compile Include="Assets\Scripts\CodeMonkey\Utils\World_Sprite.cs" />
      <Compile Include="Assets\Scripts\Initializer.cs" />
+     <Compile Include="Assets\Scripts\LevelConfiguration.cs" />
      <Compile Include="Assets\Scripts\Saving\Saver.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\Cube.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\GridBase.cs" />
@@ -85,12 +87,13 @@
      <Compile Include="Assets\Scripts\Tilemaps\Terrain.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\TerrainGrid.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\TextGrid.cs" />
+     <Compile Include="Assets\Scripts\Tilemaps\TroopGrid.cs" />
      <Compile Include="Assets\Scripts\Tools\CameraMover.cs" />
      <Compile Include="Assets\Scripts\Tools\DesignTool.cs" />
      <Compile Include="Assets\Scripts\Tools\TerrainSetter.cs" />
+     <Compile Include="Assets\Scripts\Tools\TroopInstantiator.cs" />
      <Compile Include="Assets\Scripts\Troops\BomberTemplate.cs" />
      <Compile Include="Assets\Scripts\Troops\FighterTemplate.cs" />
-     <Compile Include="Assets\Scripts\Troops\Troop.cs" />
      <Compile Include="Assets\Scripts\Troops\TroopTemplate.cs" />
      <None Include="Assets\Scripts\CodeMonkey\README.txt" />
      <None Include="Assets\Scripts\Scripts.asmdef" />

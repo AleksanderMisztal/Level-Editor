@@ -1,5 +1,4 @@
-﻿using System;
-using Tilemaps;
+﻿using Tilemaps;
 using Tools;
 using UnityEngine;
 
@@ -25,10 +24,19 @@ public class Initializer : MonoBehaviour
         tools[0].Enabled = true;
     }
 
-    public void NextTool()
+    private void Update()
     {
-        tools[activeTool].Enabled = false;
-        tools[++activeTool].Enabled = true;
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            NextTool();
+        }
+    }
+
+    private void NextTool()
+    {
+        tools[activeTool++].Enabled = false;
+        if (activeTool >= tools.Length) activeTool -= tools.Length;
+        tools[activeTool].Enabled = true;
     }
 
     public static Vector3 GetMouseWorldPosition()

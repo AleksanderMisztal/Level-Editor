@@ -10,6 +10,7 @@
           <e p="TroopEditor.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="BackgroundManager.cs" t="Include" />
           <e p="CodeMonkey" t="Include">
             <e p="Assets.cs" t="Include" />
             <e p="CMDebug.cs" t="Include" />
@@ -37,6 +38,7 @@
             </e>
           </e>
           <e p="Initializer.cs" t="Include" />
+          <e p="LevelConfiguration.cs" t="Include" />
           <e p="Saving" t="Include">
             <e p="Saver.cs" t="Include" />
           </e>
@@ -48,16 +50,17 @@
             <e p="Terrain.cs" t="Include" />
             <e p="TerrainGrid.cs" t="Include" />
             <e p="TextGrid.cs" t="Include" />
+            <e p="TroopGrid.cs" t="Include" />
           </e>
           <e p="Tools" t="Include">
             <e p="CameraMover.cs" t="Include" />
             <e p="DesignTool.cs" t="Include" />
             <e p="TerrainSetter.cs" t="Include" />
+            <e p="TroopInstantiator.cs" t="Include" />
           </e>
           <e p="Troops" t="Include">
             <e p="BomberTemplate.cs" t="Include" />
             <e p="FighterTemplate.cs" t="Include" />
-            <e p="Troop.cs" t="Include" />
             <e p="TroopTemplate.cs" t="Include" />
           </e>
         </e>

@@ -35,6 +35,17 @@ namespace Tools
 
         protected void Update()
         {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                Saver.Save(LevelConfiguration.name +  "_terrains", terrainGrid.Dto());
+            }
+
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                TerrainGridDto dto = Saver.Read<TerrainGridDto>(LevelConfiguration.name +  "_terrains");
+                terrainGrid.Load(dto);
+            }
+            
             if (!Enabled) return;
             
             if (Input.GetKeyDown("n"))
@@ -49,17 +60,6 @@ namespace Tools
                 Terrain terrain = terrains[currentTerrainId];
                 
                 terrainGrid.SetTile(mousePosition, terrain);
-            }
-
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                Saver.Save("terrainSave", terrainGrid.Dto());
-            }
-
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                TerrainGridDto dto = Saver.Read<TerrainGridDto>("terrainSave");
-                terrainGrid.Load(dto);
             }
         }
     }

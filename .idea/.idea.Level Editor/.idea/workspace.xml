@@ -11,9 +11,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f84b617d-22f9-4ff7-ba47-c2b2f1ce010d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Terrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Terrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TextGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TextGrid.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LevelConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LevelConfiguration.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TroopInstantiator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TroopInstantiator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Saves/terrainSave.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Saves/terrainSave.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelEditor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelEditor.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Saving/Saver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Saving/Saver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Troops/Troop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Troops/Troop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,13 +44,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/aleks/Projects/TS Games/Level Editor/Assets/Troops/B17.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/TroopEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/aleks/Projects/TS Games/Level Editor/Assets/Scripts/Tilemaps/Terrain.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scriptables/BomberTemplate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Grid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/Saver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TileObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/Tests/EditMode/ConversionTests.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UtilsClass.cs" />
@@ -49,17 +66,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/CameraMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/TroopEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Troops/TroopTemplate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Troops/Troop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/IRenderable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Tool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/DesignTool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TerrainGrid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Terrain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TextGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Troops/Troop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TerrainGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TroopInstantiator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/Saver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs" />
       </list>
     </option>
   </component>
@@ -87,6 +109,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\Level Editor.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\aleks\Projects\TS Games\Level Editor\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -117,7 +147,7 @@
       <workItem from="1602328280153" duration="8443000" />
       <workItem from="1602341864989" duration="7632000" />
       <workItem from="1602515441104" duration="18868000" />
-      <workItem from="1602770116752" duration="7582000" />
+      <workItem from="1602770116752" duration="15779000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1602526688119</created>
@@ -140,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602777711576</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added gitignore">
+      <created>1602778329494</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602778329494</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +200,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Saving tiles works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Saving tiles works" />
+    <MESSAGE value="Added gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="126" key="RiderGenerateDialog" timestamp="1602595457325">

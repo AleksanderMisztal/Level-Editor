@@ -5,7 +5,7 @@ namespace Saving
 {
     public static class Saver
     {
-        private const string FileExtension = ".txt";
+        private const string fileExtension = ".txt";
         private static readonly string savePath = Application.dataPath + "/Saves/";
 
         static Saver()
@@ -17,13 +17,13 @@ namespace Saving
         public static void Save(string fileName, object obj)
         {
             string data = JsonUtility.ToJson(obj);
-            string saveName = savePath + fileName + FileExtension;
+            string saveName = savePath + fileName + fileExtension;
             File.WriteAllText(saveName, data);
         }
 
         public static T Read<T>(string fileName)
         {
-            string saveName = savePath + fileName + FileExtension;
+            string saveName = savePath + fileName + fileExtension;
             string data = File.ReadAllText(saveName);
             T read = JsonUtility.FromJson<T>(data);
             return read;
