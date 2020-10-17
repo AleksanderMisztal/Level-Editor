@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Tools
 {
-    public class TroopInstantiator : DesignTool
+    public class TroopTool : DesignTool
     {
         [SerializeField] private TroopTemplate[] troopTemplates;
         private int activeId = 0;
@@ -25,27 +25,20 @@ namespace Tools
             }
         }
 
-
-        private void Start()
+        public override void Initialize()
         {
+            troopGrid = new TroopGrid(Initializer.grid);
             foreach (TroopTemplate template in troopTemplates)
                 troopByName.Add(template.name, template);
-            troopGrid = new TroopGrid(Initializer.grid);
+        }
+
+        public override void SetVisibleSize(int x, int y)
+        {
+            
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                Saver.Save(LevelConfiguration.name +  "_troops", troopGrid.Dto());
-            }
-            
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                TroopGridDto dto = Saver.Read<TroopGridDto>(LevelConfiguration.name +  "_troops");
-                troopGrid.Load(dto);
-            }
-            
             if (!Enabled) return;
             
             if (Input.GetKeyDown("n"))
@@ -59,6 +52,17 @@ namespace Tools
                 Vector3 position = Initializer.GetHexCenterWp();
                 troopGrid.SetTile(position, troopTemplates[activeId]);
             }
+        }
+
+        public override void Load()
+        {
+            GridDto dto = Saver.Read<GridDto>(LevelConfiguration.name + "/troops");
+            troopGrid.Load(dto);
+        }
+
+        public override void Save()
+        {
+            Saver.Save(LevelConfiguration.name + "/troops", troopGrid.Dto());
         }
     }
 }

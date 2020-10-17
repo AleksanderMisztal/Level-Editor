@@ -6,7 +6,7 @@ using Terrain = Tilemaps.Terrain;
 
 namespace Tools
 {
-    public class TerrainSetter : DesignTool
+    public class TerrainTool : DesignTool
     {
         [SerializeField] private Terrain[] terrains;
         private int currentTerrainId;
@@ -26,26 +26,20 @@ namespace Tools
             }
         }
 
-        private void Start()
+        public override void Initialize()
         {
+            terrainGrid = new TerrainGrid(Initializer.grid);
             foreach (Terrain terrain in terrains) 
                 terrainByName.Add(terrain.name, terrain);
-            terrainGrid = new TerrainGrid(Initializer.grid);
+        }
+
+        public override void SetVisibleSize(int x, int y)
+        {
+            
         }
 
         protected void Update()
         {
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                Saver.Save(LevelConfiguration.name +  "_terrains", terrainGrid.Dto());
-            }
-
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                TerrainGridDto dto = Saver.Read<TerrainGridDto>(LevelConfiguration.name +  "_terrains");
-                terrainGrid.Load(dto);
-            }
-            
             if (!Enabled) return;
             
             if (Input.GetKeyDown("n"))
@@ -61,6 +55,17 @@ namespace Tools
                 
                 terrainGrid.SetTile(mousePosition, terrain);
             }
+        }
+
+        public override void Load()
+        {
+            GridDto dto = Saver.Read<GridDto>(LevelConfiguration.name + "/terrains");
+            terrainGrid.Load(dto);
+        }
+
+        public override void Save()
+        {
+            Saver.Save(LevelConfiguration.name + "/terrains", terrainGrid.Dto());
         }
     }
 }

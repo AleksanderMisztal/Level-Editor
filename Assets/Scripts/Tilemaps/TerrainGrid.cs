@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Saving;
 using Tools;
 using UnityEngine.Assertions;
 
@@ -13,7 +13,7 @@ namespace Tilemaps
             textGrid = new TextGrid(gridBase);
         }
 
-        public TerrainGridDto Dto()
+        public GridDto Dto()
         {
             List<string> gridTiles = new List<string>(); 
             for (int y = 0; y < gridBase.ySize; y++)
@@ -22,10 +22,10 @@ namespace Tilemaps
                 gridTiles.Add(tiles[x, y]?.name);
             }
 
-            return new TerrainGridDto() {xSize = gridBase.xSize, ySize = gridBase.ySize, terrains = gridTiles.ToArray()};
+            return new GridDto() {xSize = gridBase.xSize, ySize = gridBase.ySize, data = gridTiles.ToArray()};
         }
 
-        public void Load(TerrainGridDto dto)
+        public void Load(GridDto dto)
         {
             Assert.AreEqual(gridBase.xSize, dto.xSize);
             Assert.AreEqual(gridBase.ySize, dto.ySize);
@@ -34,25 +34,17 @@ namespace Tilemaps
             for (int y = 0; y < gridBase.ySize; y++)
             for (int x = 0; x < gridBase.xSize; x++)
             {
-                string name = dto.terrains[id++];
+                string name = dto.data[id++];
                 Terrain t = null;
-                if (!string.IsNullOrEmpty(name)) t = TerrainSetter.GetTerrain(name);
+                if (!string.IsNullOrEmpty(name)) t = TerrainTool.GetTerrain(name);
                 SetTile(x, y, t);
             }
         }
 
-        public override void SetTile(int x, int y, Terrain tile)
+        protected override void SetTile(int x, int y, Terrain tile)
         {
             base.SetTile(x, y, tile);
             textGrid.SetTile(x, y, tile?.name);
         }
-    }
-    
-    [Serializable]
-    public class TerrainGridDto
-    {
-        public int xSize;
-        public int ySize;
-        public string[] terrains;
     }
 }

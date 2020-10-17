@@ -11,25 +11,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f84b617d-22f9-4ff7-ba47-c2b2f1ce010d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LevelConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LevelConfiguration.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TroopInstantiator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TroopInstantiator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Saving/BoardDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Saving/BoardDto.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Saving/GridDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Saving/GridDto.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/UiManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/UiManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saves/terrainSave.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Saves/terrainSave.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelEditor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelEditor.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Saves.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Saves/saveObject.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Saves/saveObject.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Saves/terrainSave.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Saves/terrainSave.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Saves/test123.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Saves/test123.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Saves/troopSave.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Saves/troopSave.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Saving/Saver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Saving/Saver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TerrainGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TerrainGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TextGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TextGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/CameraMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/BoardTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/CameraMover.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/BoardTool.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/DesignTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/DesignTool.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Troops/Troop.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Troops/Troop.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/TroopInstantiator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TroopTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/TroopInstantiator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TroopTool.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/board.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/board.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,20 +84,30 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Troops/TroopTemplate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/IRenderable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Tool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Terrain.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Troops/Troop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TroopInstantiator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scenes.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scenes/UiManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TroopSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TerrainGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/BackgroundDto.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/GridDto.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/Saver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/BoardDto.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scenes/MenuManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/DesignTool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Terrain.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/BoardTool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainTool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TroopTool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TextGrid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Troops/Troop.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TerrainGrid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelConfiguration.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TroopInstantiator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/Saver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs" />
       </list>
     </option>
   </component>
@@ -147,7 +173,7 @@
       <workItem from="1602328280153" duration="8443000" />
       <workItem from="1602341864989" duration="7632000" />
       <workItem from="1602515441104" duration="18868000" />
-      <workItem from="1602770116752" duration="15779000" />
+      <workItem from="1602770116752" duration="30993000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1602526688119</created>
@@ -177,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602778329494</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Save and load background">
+      <created>1602851035096</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602851035101</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +234,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Saving tiles works" />
     <MESSAGE value="Added gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added gitignore" />
+    <MESSAGE value="Save and load background" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save and load background" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="126" key="RiderGenerateDialog" timestamp="1602595457325">

@@ -80,7 +80,10 @@
      <Compile Include="Assets\Scripts\CodeMonkey\Utils\World_Sprite.cs" />
      <Compile Include="Assets\Scripts\Initializer.cs" />
      <Compile Include="Assets\Scripts\LevelConfiguration.cs" />
+     <Compile Include="Assets\Scripts\Saving\BoardDto.cs" />
+     <Compile Include="Assets\Scripts\Saving\GridDto.cs" />
      <Compile Include="Assets\Scripts\Saving\Saver.cs" />
+     <Compile Include="Assets\Scripts\Scenes\MenuManager.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\Cube.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\GridBase.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\HexGrid.cs" />
@@ -88,10 +91,10 @@
      <Compile Include="Assets\Scripts\Tilemaps\TerrainGrid.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\TextGrid.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\TroopGrid.cs" />
-     <Compile Include="Assets\Scripts\Tools\CameraMover.cs" />
+     <Compile Include="Assets\Scripts\Tools\BoardTool.cs" />
      <Compile Include="Assets\Scripts\Tools\DesignTool.cs" />
-     <Compile Include="Assets\Scripts\Tools\TerrainSetter.cs" />
-     <Compile Include="Assets\Scripts\Tools\TroopInstantiator.cs" />
+     <Compile Include="Assets\Scripts\Tools\TerrainTool.cs" />
+     <Compile Include="Assets\Scripts\Tools\TroopTool.cs" />
      <Compile Include="Assets\Scripts\Troops\BomberTemplate.cs" />
      <Compile Include="Assets\Scripts\Troops\FighterTemplate.cs" />
      <Compile Include="Assets\Scripts\Troops\TroopTemplate.cs" />

@@ -40,7 +40,12 @@
           <e p="Initializer.cs" t="Include" />
           <e p="LevelConfiguration.cs" t="Include" />
           <e p="Saving" t="Include">
+            <e p="BoardDto.cs" t="Include" />
+            <e p="GridDto.cs" t="Include" />
             <e p="Saver.cs" t="Include" />
+          </e>
+          <e p="Scenes" t="Include">
+            <e p="MenuManager.cs" t="Include" />
           </e>
           <e p="Scripts.asmdef" t="Include" />
           <e p="Tilemaps" t="Include">
@@ -53,10 +58,10 @@
             <e p="TroopGrid.cs" t="Include" />
           </e>
           <e p="Tools" t="Include">
-            <e p="CameraMover.cs" t="Include" />
+            <e p="BoardTool.cs" t="Include" />
             <e p="DesignTool.cs" t="Include" />
-            <e p="TerrainSetter.cs" t="Include" />
-            <e p="TroopInstantiator.cs" t="Include" />
+            <e p="TerrainTool.cs" t="Include" />
+            <e p="TroopTool.cs" t="Include" />
           </e>
           <e p="Troops" t="Include">
             <e p="BomberTemplate.cs" t="Include" />

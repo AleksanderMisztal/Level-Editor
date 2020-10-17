@@ -9,6 +9,7 @@ namespace Tilemaps
 
         public void SetTile(int x, int y, string text)
         {
+            if (!gridBase.IsInside(x, y)) return;
             if (tiles[x, y] is null) 
                 tiles[x, y] = UtilsClass.CreateWorldText(text, null, gridBase.ToWorld(x, y));
             else
