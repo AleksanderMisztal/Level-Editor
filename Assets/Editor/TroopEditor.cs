@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Troops;
+using LevelEditor.Troops;
 using UnityEditor;
 using UnityEngine;
 
-namespace Editor
+namespace LevelEditor.Editor
 {
     [CustomEditor(typeof(TroopTemplate), true)]
     public class TroopEditor : UnityEditor.Editor

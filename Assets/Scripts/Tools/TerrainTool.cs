@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Saving;
-using Tilemaps;
+using LevelEditor.Saving;
+using LevelEditor.Tilemaps;
 using UnityEngine;
-using Terrain = Tilemaps.Terrain;
+using Terrain = LevelEditor.Tilemaps.Terrain;
 
-namespace Tools
+namespace LevelEditor.Tools
 {
     public class TerrainTool : DesignTool
     {

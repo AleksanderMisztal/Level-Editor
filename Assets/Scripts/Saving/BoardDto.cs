@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Saving
+namespace LevelEditor.Saving
 {    
     [Serializable]
     public class BoardDto

@@ -12,7 +12,7 @@
 
 using UnityEngine;
 
-namespace CodeMonkey {
+namespace LevelEditor.CodeMonkey {
 
     /*
      * Global Asset references

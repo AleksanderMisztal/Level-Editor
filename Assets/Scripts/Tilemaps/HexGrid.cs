@@ -1,7 +1,7 @@
 ﻿using GameDataStructures.Positioning;
 using UnityEngine;
 
-namespace Tilemaps
+namespace LevelEditor.Tilemaps
 {
     public class HexGrid<T>
     {

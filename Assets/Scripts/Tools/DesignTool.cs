@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Tools
+namespace LevelEditor.Tools
 {
     public abstract class DesignTool : MonoBehaviour
     {

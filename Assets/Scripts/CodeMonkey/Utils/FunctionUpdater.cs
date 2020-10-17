@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CodeMonkey.Utils {
+namespace LevelEditor.CodeMonkey.Utils {
 
     /*
      * Calls function on every Update until it returns true

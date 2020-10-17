@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class BackgroundManager : MonoBehaviour
+namespace LevelEditor
 {
-    private void Start()
+    public class BackgroundManager : MonoBehaviour
     {
-        SetBackground(LevelConfiguration.background);
-    }
+        private void Start()
+        {
+            SetBackground(LevelConfiguration.background);
+        }
 
-    public void SetBackground(string imageName)
-    {
-        LevelConfiguration.background = imageName;
-        Sprite background = Resources.Load<Sprite>(imageName);
-        GetComponent<Image>().sprite = background;
+        public void SetBackground(string imageName)
+        {
+            LevelConfiguration.background = imageName;
+            Sprite background = Resources.Load<Sprite>(imageName);
+            GetComponent<Image>().sprite = background;
+        }
     }
 }

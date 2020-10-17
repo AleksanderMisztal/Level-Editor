@@ -17,7 +17,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-namespace CodeMonkey.Utils {
+namespace LevelEditor.CodeMonkey.Utils {
 
     /*
      * Various assorted utilities functions

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Tilemaps
+namespace LevelEditor.Tilemaps
 {
     [CreateAssetMenu(fileName="New Terrain", menuName="Terrain")]
     [Serializable]

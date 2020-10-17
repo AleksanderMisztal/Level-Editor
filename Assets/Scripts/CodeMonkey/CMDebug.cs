@@ -11,10 +11,10 @@
  */
 
 using System;
-using CodeMonkey.Utils;
+using LevelEditor.CodeMonkey.Utils;
 using UnityEngine;
 
-namespace CodeMonkey {
+namespace LevelEditor.CodeMonkey {
 
     /*
      * Debug Class with various helper functions to quickly create buttons, text, etc

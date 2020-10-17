@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 
-namespace Saving
+namespace LevelEditor.Saving
 {
     public static class Saver
     {

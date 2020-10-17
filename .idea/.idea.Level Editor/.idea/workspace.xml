@@ -11,16 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f84b617d-22f9-4ff7-ba47-c2b2f1ce010d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TerrainGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TerrainGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/BoardTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/BoardTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/DesignTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/DesignTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainTool.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/TroopTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TroopTool.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +23,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/aleks/Projects/TS Games/Level Editor/Assets/Scripts/Tools/BoardTool.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/TroopEditor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -53,7 +45,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TileSetter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/Cube.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/CameraMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/TroopEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Troops/TroopTemplate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/IRenderable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Tool.cs" />
@@ -69,19 +60,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainSetter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Saving/Saver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Saving/BoardDto.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelConfiguration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scenes/MenuManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TextGrid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/ResizeTool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/DesignTool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/BoardTool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainTool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TroopTool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/TroopGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/TroopEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TroopTool.cs" />
       </list>
     </option>
   </component>
@@ -148,7 +140,7 @@
       <workItem from="1602341864989" duration="7632000" />
       <workItem from="1602515441104" duration="18868000" />
       <workItem from="1602770116752" duration="30993000" />
-      <workItem from="1602927496799" duration="5238000" />
+      <workItem from="1602927496799" duration="6877000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1602526688119</created>
@@ -192,7 +184,28 @@
       <option name="project" value="LOCAL" />
       <updated>1602927516644</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Completed troop grid resizing">
+      <created>1602944514026</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602944514026</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Completed troop grid resizing">
+      <created>1602944544306</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602944544306</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed namespaces">
+      <created>1602946153062</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602946153062</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +232,9 @@
     <MESSAGE value="Added gitignore" />
     <MESSAGE value="Save and load background" />
     <MESSAGE value="gkjfvhjchtgc" />
-    <option name="LAST_COMMIT_MESSAGE" value="gkjfvhjchtgc" />
+    <MESSAGE value="Completed troop grid resizing" />
+    <MESSAGE value="Fixed namespaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed namespaces" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="126" key="RiderGenerateDialog" timestamp="1602937939516">

@@ -12,7 +12,7 @@
 
 using UnityEngine;
 
-namespace CodeMonkey.MonoBehaviours {
+namespace LevelEditor.CodeMonkey.MonoBehaviours {
 
     /*
      * Easy set up for CameraFollow, it will follow the transform with zoom

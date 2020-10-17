@@ -12,7 +12,7 @@
 
 using UnityEngine;
 
-namespace CodeMonkey.Utils {
+namespace LevelEditor.CodeMonkey.Utils {
 
     /*
      * Sprite in the World

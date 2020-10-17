@@ -13,7 +13,7 @@
 using System;
 using UnityEngine;
 
-namespace CodeMonkey.MonoBehaviours {
+namespace LevelEditor.CodeMonkey.MonoBehaviours {
 
     /*
      * Script to handle Camera Movement and Zoom

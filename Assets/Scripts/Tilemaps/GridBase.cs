@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using GameDataStructures.Positioning;
 using UnityEngine;
 
-namespace Tilemaps
+namespace LevelEditor.Tilemaps
 {
     public class GridBase
     {

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Saving;
-using Tools;
+using LevelEditor.Saving;
+using LevelEditor.Tools;
 using UnityEngine.Assertions;
 
-namespace Tilemaps
+namespace LevelEditor.Tilemaps
 {
     public class TerrainGrid : HexGrid<Terrain>
     {

@@ -1,7 +1,7 @@
-﻿using Saving;
+﻿using LevelEditor.Saving;
 using UnityEngine;
 
-namespace Tools
+namespace LevelEditor.Tools
 {
     public class BoardTool : DesignTool
     {

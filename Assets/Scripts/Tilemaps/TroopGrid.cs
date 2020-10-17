@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using GameDataStructures.Positioning;
-using Saving;
-using Tools;
-using Troops;
+using LevelEditor.Saving;
+using LevelEditor.Tools;
+using LevelEditor.Troops;
 using UnityEngine;
 using UnityEngine.Assertions;
 using Object = UnityEngine.Object;
 
-namespace Tilemaps
+namespace LevelEditor.Tilemaps
 {
     public class TroopGrid : HexGrid<GameObject>
     {

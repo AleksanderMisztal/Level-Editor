@@ -1,7 +1,7 @@
-﻿using CodeMonkey.Utils;
+﻿using LevelEditor.CodeMonkey.Utils;
 using UnityEngine;
 
-namespace Tilemaps
+namespace LevelEditor.Tilemaps
 {
     public class TextGrid : HexGrid<TextMesh>
     {

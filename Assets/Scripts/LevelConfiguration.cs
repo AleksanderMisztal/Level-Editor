@@ -1,6 +1,9 @@
-﻿public static class LevelConfiguration
+﻿namespace LevelEditor
 {
-    public static string name;
-    public static string background;
-    public static bool isLoaded;
+    public static class LevelConfiguration
+    {
+        public static string name;
+        public static string background;
+        public static bool isLoaded;
+    }
 }

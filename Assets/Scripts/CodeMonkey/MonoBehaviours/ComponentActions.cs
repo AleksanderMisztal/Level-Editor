@@ -13,7 +13,7 @@
 using System;
 using UnityEngine;
 
-namespace CodeMonkey.MonoBehaviours {
+namespace LevelEditor.CodeMonkey.MonoBehaviours {
 
     /*
      * Trigger Actions on MonoBehaviour Component events

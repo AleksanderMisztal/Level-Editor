@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using GameDataStructures.Positioning;
-using Saving;
-using Tilemaps;
-using Troops;
+using LevelEditor.Saving;
+using LevelEditor.Tilemaps;
+using LevelEditor.Troops;
 using UnityEngine;
 
-namespace Tools
+namespace LevelEditor.Tools
 {
     public class TroopTool : DesignTool
     {
         [SerializeField] private TroopTemplate[] troopTemplates;
-        private int activeId = 0;
+        private int activeId;
         private TroopGrid troopGrid;
         private static readonly Dictionary<string, TroopTemplate> troopByName = new Dictionary<string, TroopTemplate>();
 
@@ -40,21 +40,12 @@ namespace Tools
                 GameObject troop = troopGrid.GetTile(v.X, v.Y);
                 if (troop is null) continue;
                 troop.SetActive(true);
-                Debug.Log(troop + "activated");
             }
-
-            Debug.Log("Deactivating " + Initializer.grid.newUnreachable.Count + " tiles");
-            if (Initializer.grid.newUnreachable.Count < 50)
-                foreach (VectorTwo v in Initializer.grid.newUnreachable)
-                {
-                    Debug.Log(v);
-                }
             foreach (VectorTwo v in Initializer.grid.newUnreachable)
             {
                 GameObject troop = troopGrid.GetTile(v.X, v.Y);
                 if (troop is null) continue;
                 troop.SetActive(false);
-                Debug.Log(troop + "deactivated");
             }
         }
 

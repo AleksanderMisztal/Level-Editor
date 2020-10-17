@@ -1,7 +1,7 @@
 ﻿using GameDataStructures;
 using UnityEngine;
 
-namespace Troops
+namespace LevelEditor.Troops
 {
     [CreateAssetMenu(fileName="New Bomber", menuName="Troops/Bomber")]
     public class BomberTemplate : TroopTemplate

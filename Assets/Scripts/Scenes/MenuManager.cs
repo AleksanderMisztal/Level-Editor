@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Scenes
+namespace LevelEditor.Scenes
 {
     public class MenuManager : MonoBehaviour
     {

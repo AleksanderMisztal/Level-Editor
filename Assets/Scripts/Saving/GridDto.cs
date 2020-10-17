@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Saving
+namespace LevelEditor.Saving
 {
     [Serializable]
     public class GridDto

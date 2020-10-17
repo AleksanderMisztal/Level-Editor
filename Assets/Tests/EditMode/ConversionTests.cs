@@ -1,9 +1,9 @@
 ﻿using GameDataStructures.Positioning;
+using LevelEditor.Tilemaps;
 using NUnit.Framework;
-using Tilemaps;
 using UnityEngine;
 
-namespace Tests.EditMode
+namespace LevelEditor.Tests.EditMode
 {
     public class ConversionTests
     {

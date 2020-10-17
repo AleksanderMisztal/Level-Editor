@@ -2,7 +2,7 @@
 using GameDataStructures;
 using UnityEngine;
 
-namespace Troops
+namespace LevelEditor.Troops
 {
     public abstract class TroopTemplate : ScriptableObject
     {
