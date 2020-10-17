@@ -20,7 +20,7 @@ namespace LevelEditor.Tilemaps
             SetTile(coords.X, coords.Y, tile);
         }
 
-        protected virtual void SetTile(int x, int y, T tile)
+        public virtual void SetTile(int x, int y, T tile)
         {
             if (x < 0 || x >= gridBase.XSize || y < 0 || y >= gridBase.YSize) return;
             tiles[x, y] = tile;

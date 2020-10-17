@@ -1,4 +1,5 @@
-﻿using LevelEditor.Tilemaps;
+﻿using LevelEditor.Saving;
+using LevelEditor.Tilemaps;
 using LevelEditor.Tools;
 using UnityEngine;
 
@@ -7,23 +8,24 @@ namespace LevelEditor
     public class Initializer : MonoBehaviour
     {
         private DesignTool[] tools;
-        private int activeTool = 0;
-        
-        public static GridBase grid;
+        private int activeTool;
+
+        private GridBase gridBase;
         private new static Camera camera;
         private const float cellSize = 10f;
 
+        private int xSize = 10, ySize = 10;
+
         private void Start()
         {
-            grid = new GridBase(100, 100, cellSize);
+            gridBase = new GridBase(30, 30, cellSize);
             camera = Camera.main;
             tools = FindObjectsOfType<DesignTool>();
-            foreach (DesignTool tool in tools) tool.Initialize();
+            foreach (DesignTool tool in tools) tool.Initialize(gridBase);
             tools[0].Enabled = true;
+            BoardTool.resizeCallback = v => Resize(xSize + v.X, ySize + v.Y);
 
-            if (LevelConfiguration.isLoaded)
-                foreach (DesignTool tool in tools)
-                    tool.Load();
+            if (LevelConfiguration.isLoaded) Load();
         }
 
         private void Update()
@@ -32,31 +34,23 @@ namespace LevelEditor
             if (Input.GetKeyDown(KeyCode.S))
                 foreach (DesignTool tool in tools)
                     tool.Save();
-            if (Input.GetKeyDown(KeyCode.L))
-                foreach (DesignTool tool in tools)
-                    tool.Load();
-
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                Resize();
-            }
+            if (Input.GetKeyDown(KeyCode.L)) Load();
         }
 
-        private int xre = 20, yre = 20;
-        private void Resize()
+        private void Load()
         {
-            Resize(xre--, yre--);
-            if (xre < 10)
-            {
-                xre += 10;
-                yre += 10;
-            }
+            GridDto dto = Saver.Read<GridDto>(LevelConfiguration.name + "/troops");
+            Resize(dto.xSize, dto.ySize);
+            foreach (DesignTool tool in tools)
+                tool.Load();
         }
 
         private void Resize(int newX, int newY)
         {
-            if (newX < 0 || newX >= grid.maxXSize || newY < 0 || newY >= grid.maxYSize) return;
-            grid.Redraw(newX, newY);
+            if (newX < 5 || newX >= gridBase.maxXSize || newY < 5 || newY >= gridBase.maxYSize) return;
+            xSize = newX;
+            ySize = newY;
+            gridBase.Redraw(newX, newY);
             foreach (DesignTool tool in tools) tool.Resize();
         }
 
@@ -67,7 +61,7 @@ namespace LevelEditor
             tools[activeTool].Enabled = true;
         }
 
-        public static Vector3 GetMouseWorldPosition()
+        private static Vector3 GetMouseWorldPosition()
         {
             Vector3 wp = camera.ScreenToWorldPoint(Input.mousePosition);
             wp.z = 0;

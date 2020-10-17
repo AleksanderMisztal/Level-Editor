@@ -1,4 +1,7 @@
-﻿using LevelEditor.Saving;
+﻿using System;
+using GameDataStructures.Positioning;
+using LevelEditor.Saving;
+using LevelEditor.Tilemaps;
 using UnityEngine;
 
 namespace LevelEditor.Tools
@@ -8,9 +11,10 @@ namespace LevelEditor.Tools
         [SerializeField] private new Camera camera;
         [SerializeField] private float moveSpeed;
         [SerializeField] private BackgroundManager backgroundManager;
+        public static Action<VectorTwo> resizeCallback;
 
 
-        public override void Initialize()
+        public override void Initialize(GridBase _)
         {
             
         }
@@ -23,8 +27,15 @@ namespace LevelEditor.Tools
         private void Update()
         {
             if (!Enabled) return;
-            AdjustCameraPosition();
-            AdjustCameraSize();
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                ResizeGrid();
+            }
+            else
+            {
+                AdjustCameraPosition();
+                AdjustCameraSize();
+            }
         }
 
         private void AdjustCameraPosition()
@@ -35,6 +46,19 @@ namespace LevelEditor.Tools
             if (Input.GetKey(KeyCode.LeftArrow)) dp -= Vector3.left;
             if (Input.GetKey(KeyCode.RightArrow)) dp -= Vector3.right;
             camera.transform.position += dp * moveSpeed;
+        }
+        private static void ResizeGrid()
+        {
+            int dx = 0;
+            int dy = 0;
+            if (Input.GetKeyDown(KeyCode.DownArrow)) dy--;
+            if (Input.GetKeyDown(KeyCode.UpArrow)) dy++;
+            if (Input.GetKeyDown(KeyCode.LeftArrow)) dx--;
+            if (Input.GetKeyDown(KeyCode.RightArrow)) dx++;
+
+            if (dx == 0 && dy == 0) return;
+            
+            resizeCallback(new VectorTwo(dx, dy));
         }
 
         private void AdjustCameraSize()

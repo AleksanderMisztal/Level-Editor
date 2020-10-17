@@ -52,6 +52,7 @@
             <e p="Cube.cs" t="Include" />
             <e p="GridBase.cs" t="Include" />
             <e p="HexGrid.cs" t="Include" />
+            <e p="LineDrawer.cs" t="Include" />
             <e p="Terrain.cs" t="Include" />
             <e p="TerrainGrid.cs" t="Include" />
             <e p="TextGrid.cs" t="Include" />

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using GameDataStructures.Positioning;
 using UnityEngine;
 
@@ -9,15 +8,13 @@ namespace LevelEditor.Tilemaps
     {
         public int XSize { get; private set; }
         public int YSize { get; private set; }
-        public int maxXSize;
-        public int maxYSize;
+        public readonly int maxXSize;
+        public readonly int maxYSize;
         private readonly float cellSize;
         
-        private static Color color = Color.white;
-        private static readonly Vector3 left = Vector3.left;
-        private static readonly Vector3 upLeft = new Vector3(-.5f, (float)Math.Sqrt((double)3f/4));
         public List<VectorTwo> newReachable;
         public List<VectorTwo> newUnreachable;
+        private GameObject[,] tiles; 
 
         public GridBase(int xSize, int ySize, float cellSize)
         {
@@ -26,8 +23,8 @@ namespace LevelEditor.Tilemaps
             maxXSize = xSize;
             maxYSize = ySize;
             this.cellSize = cellSize;
+            tiles = new GameObject[xSize, ySize];
 
-            DrawMargin(5);
             DrawTiles();
         }
 
@@ -44,15 +41,13 @@ namespace LevelEditor.Tilemaps
                     continue;
                 }
                 newReachable.Add(new VectorTwo(x, y));
-                Vector3 center = Cube.FromOffset(x, y).ToWorld(cellSize);
-                DrawLines(center);
+                tiles[x, y].SetActive(true);
             }
 
             int prevX = XSize;
             int prevY = YSize;
             XSize = newX;
             YSize = newY;
-            color = Color.gray;
             for (int x = 0; x < prevX; x++)
             for (int y = 0; y < prevY; y++)
             {
@@ -62,19 +57,7 @@ namespace LevelEditor.Tilemaps
                     continue;
                 }
                 newUnreachable.Add(new VectorTwo(x, y));
-                Vector3 center = Cube.FromOffset(x, y).ToWorld(cellSize);
-                DrawLines(center);
-            }
-            color = Color.white;
-            for (int x = 0; x < XSize; x++)
-            {
-                Vector3 center = Cube.FromOffset(x, YSize-1).ToWorld(cellSize);
-                DrawLines(center);
-            }
-            for (int y = 0; y < YSize; y++)
-            {
-                Vector3 center = Cube.FromOffset(XSize-1, y).ToWorld(cellSize);
-                DrawLines(center);
+                tiles[x, y].SetActive(false);
             }
         }
         
@@ -84,36 +67,8 @@ namespace LevelEditor.Tilemaps
             for (int y = 0; y < YSize; y++)
             {
                 Vector3 center = Cube.FromOffset(x, y).ToWorld(cellSize);
-                DrawLines(center);
+                tiles[x, y] = LineDrawer.DrawHex(center, cellSize);
             }
-        }
-
-        private void DrawMargin(int dw)
-        {
-            color = Color.gray;
-            for (int x = -dw; x < XSize + dw; x++)
-            for (int y = -dw; y < YSize + dw; y++)
-            {
-                if (IsInside(x, y)) y = YSize;
-                Vector3 center = Cube.FromOffset(x, y).ToWorld(cellSize);
-                DrawLines(center);
-            }
-            color = Color.white;
-        }
-
-        private void DrawLines(Vector3 center)
-        {
-            Draw(center, left, upLeft);
-            Draw(center, upLeft, upLeft-left);
-            Draw(center, upLeft-left, -left);
-            Draw(center, -left, -upLeft);
-            Draw(center, -upLeft, -upLeft+left);
-            Draw(center, -upLeft+left, left);
-        }
-
-        private void Draw(Vector3 center, Vector3 end1, Vector3 end2)
-        {
-            Debug.DrawLine(center + end1 * cellSize, center + end2 * cellSize, color, 1000f);
         }
 
         public bool IsInside(int x, int y)

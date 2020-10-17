@@ -87,6 +87,7 @@
      <Compile Include="Assets\Scripts\Tilemaps\Cube.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\GridBase.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\HexGrid.cs" />
+     <Compile Include="Assets\Scripts\Tilemaps\LineDrawer.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\Terrain.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\TerrainGrid.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\TextGrid.cs" />

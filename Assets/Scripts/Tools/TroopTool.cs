@@ -4,44 +4,50 @@ using LevelEditor.Saving;
 using LevelEditor.Tilemaps;
 using LevelEditor.Troops;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace LevelEditor.Tools
 {
     public class TroopTool : DesignTool
     {
-        [SerializeField] private TroopTemplate[] troopTemplates;
+        [FormerlySerializedAs("troopTemplates")] [SerializeField] private TroopTemplate[] templates;
         private int activeId;
+        
+        private static readonly Dictionary<string, TroopTemplate> templateByName = new Dictionary<string, TroopTemplate>();
+        
         private TroopGrid troopGrid;
-        private static readonly Dictionary<string, TroopTemplate> troopByName = new Dictionary<string, TroopTemplate>();
+        private GridBase gridBase;
 
         public static TroopTemplate GetTroop(string name)
         {
             try
             {
-                return troopByName[name];
+                return templateByName[name];
             }
             catch (KeyNotFoundException)
             {
                 return null;
             }
         }
+        
 
-        public override void Initialize()
+        public override void Initialize(GridBase gridBase)
         {
-            troopGrid = new TroopGrid(Initializer.grid);
-            foreach (TroopTemplate template in troopTemplates)
-                troopByName.Add(template.name, template);
+            this.gridBase = gridBase;
+            troopGrid = new TroopGrid(gridBase);
+            foreach (TroopTemplate template in templates)
+                templateByName.Add(template.name, template);
         }
 
         public override void Resize()
         {
-            foreach (VectorTwo v in Initializer.grid.newReachable)
+            foreach (VectorTwo v in gridBase.newReachable)
             {
                 GameObject troop = troopGrid.GetTile(v.X, v.Y);
                 if (troop is null) continue;
                 troop.SetActive(true);
             }
-            foreach (VectorTwo v in Initializer.grid.newUnreachable)
+            foreach (VectorTwo v in gridBase.newUnreachable)
             {
                 GameObject troop = troopGrid.GetTile(v.X, v.Y);
                 if (troop is null) continue;
@@ -56,13 +62,13 @@ namespace LevelEditor.Tools
             if (Input.GetKeyDown("n"))
             {
                 activeId++;
-                activeId %= troopTemplates.Length;
+                activeId %= templates.Length;
             }
 
             if (Input.GetMouseButtonDown(0))
             {
                 Vector3 position = Initializer.GetHexCenterWp();
-                troopGrid.SetTile(position, troopTemplates[activeId]);
+                troopGrid.SetTile(position, templates[activeId]);
             }
         }
 

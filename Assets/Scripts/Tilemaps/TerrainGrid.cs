@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using LevelEditor.Saving;
 using LevelEditor.Tools;
+using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace LevelEditor.Tilemaps
@@ -41,10 +42,16 @@ namespace LevelEditor.Tilemaps
             }
         }
 
-        protected override void SetTile(int x, int y, Terrain tile)
+        public override void SetTile(int x, int y, Terrain tile)
         {
             base.SetTile(x, y, tile);
             textGrid.SetTile(x, y, tile?.name);
+        }
+
+        public TextMesh GetTextTile(int x, int y)
+        {
+            if (x < 0 || x >= gridBase.maxXSize || y < 0 || y >= gridBase.maxYSize) return default;
+            return textGrid.GetTile(x, y);
         }
     }
 }
