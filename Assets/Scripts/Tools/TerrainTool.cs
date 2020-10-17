@@ -33,7 +33,7 @@ namespace Tools
                 terrainByName.Add(terrain.name, terrain);
         }
 
-        public override void SetVisibleSize(int x, int y)
+        public override void Resize()
         {
             
         }

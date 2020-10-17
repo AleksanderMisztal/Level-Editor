@@ -15,7 +15,7 @@ namespace Tools
             
         }
 
-        public override void SetVisibleSize(int x, int y)
+        public override void Resize()
         {
             
         }

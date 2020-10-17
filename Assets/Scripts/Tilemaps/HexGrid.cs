@@ -11,7 +11,7 @@ namespace Tilemaps
         protected HexGrid(GridBase gridBase)
         {
             this.gridBase = gridBase;
-            tiles = new T[gridBase.xSize, gridBase.ySize];
+            tiles = new T[gridBase.XSize, gridBase.YSize];
         }
 
         public void SetTile(Vector3 wp, T tile)
@@ -22,7 +22,7 @@ namespace Tilemaps
 
         protected virtual void SetTile(int x, int y, T tile)
         {
-            if (x < 0 || x >= gridBase.xSize || y < 0 || y >= gridBase.ySize) return;
+            if (x < 0 || x >= gridBase.XSize || y < 0 || y >= gridBase.YSize) return;
             tiles[x, y] = tile;
         }
 
@@ -32,9 +32,9 @@ namespace Tilemaps
             return GetTile(coords.X, coords.Y);
         }
 
-        protected virtual T GetTile(int x, int y)
+        public virtual T GetTile(int x, int y)
         {
-            if (x < 0 || x >= gridBase.xSize || y < 0 || y >= gridBase.ySize) return default;
+            if (x < 0 || x >= gridBase.maxXSize || y < 0 || y >= gridBase.maxYSize) return default;
             return tiles[x, y];
         }
     }

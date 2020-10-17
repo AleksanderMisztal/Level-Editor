@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using GameDataStructures.Positioning;
 using Saving;
 using Tilemaps;
 using Troops;
@@ -32,9 +33,29 @@ namespace Tools
                 troopByName.Add(template.name, template);
         }
 
-        public override void SetVisibleSize(int x, int y)
+        public override void Resize()
         {
-            
+            foreach (VectorTwo v in Initializer.grid.newReachable)
+            {
+                GameObject troop = troopGrid.GetTile(v.X, v.Y);
+                if (troop is null) continue;
+                troop.SetActive(true);
+                Debug.Log(troop + "activated");
+            }
+
+            Debug.Log("Deactivating " + Initializer.grid.newUnreachable.Count + " tiles");
+            if (Initializer.grid.newUnreachable.Count < 50)
+                foreach (VectorTwo v in Initializer.grid.newUnreachable)
+                {
+                    Debug.Log(v);
+                }
+            foreach (VectorTwo v in Initializer.grid.newUnreachable)
+            {
+                GameObject troop = troopGrid.GetTile(v.X, v.Y);
+                if (troop is null) continue;
+                troop.SetActive(false);
+                Debug.Log(troop + "deactivated");
+            }
         }
 
         private void Update()
