@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 859638309}
   - component: {fileID: 859638310}
   m_Layer: 0
-  m_Name: Troop Instantiator
+  m_Name: TroopTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa080c7cd9e4c9aa3b6c961092a19c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopTemplates:
+  templates:
   - {fileID: 11400000, guid: 294bb943489964e469751318b21f69eb, type: 2}
   - {fileID: 11400000, guid: 5110cbeac09797f4e99c5e7f5264b69c, type: 2}
 --- !u!1 &1382749561
@@ -379,6 +379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5537913bb76596b409a97c565bf07291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tools:
+  - {fileID: 1517729543}
+  - {fileID: 859638310}
 --- !u!4 &1382749563
 Transform:
   m_ObjectHideFlags: 0
@@ -419,7 +422,7 @@ GameObject:
   - component: {fileID: 1517729542}
   - component: {fileID: 1517729543}
   m_Layer: 0
-  m_Name: TerrainSetter
+  m_Name: TerrainTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -451,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a811030a53143749eea3615a67054b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrains:
+  templates:
   - {fileID: 11400000, guid: 20c6762fe83e59d478e37b43cd4e37fe, type: 2}
   - {fileID: 11400000, guid: e0eb9f09262e7f34684bc8da46681ecd, type: 2}
   - {fileID: 11400000, guid: d9f9063d82ee1ca4fb91a5fa9ac014c8, type: 2}

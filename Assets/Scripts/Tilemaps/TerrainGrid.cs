@@ -50,7 +50,7 @@ namespace LevelEditor.Tilemaps
 
         public TextMesh GetTextTile(int x, int y)
         {
-            if (x < 0 || x >= gridBase.maxXSize || y < 0 || y >= gridBase.maxYSize) return default;
+            if (x < 0 || x >= GridBase.maxSize || y < 0 || y >= GridBase.maxSize) return default;
             return textGrid.GetTile(x, y);
         }
     }

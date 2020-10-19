@@ -11,7 +11,7 @@ namespace LevelEditor.Tilemaps
         protected HexGrid(GridBase gridBase)
         {
             this.gridBase = gridBase;
-            tiles = new T[gridBase.XSize, gridBase.YSize];
+            tiles = new T[GridBase.maxSize, GridBase.maxSize];
         }
 
         public void SetTile(Vector3 wp, T tile)
@@ -26,15 +26,9 @@ namespace LevelEditor.Tilemaps
             tiles[x, y] = tile;
         }
 
-        public T GetTile(Vector3 wp)
+        public T GetTile(int x, int y)
         {
-            VectorTwo coords = gridBase.ToOffset(wp);
-            return GetTile(coords.X, coords.Y);
-        }
-
-        public virtual T GetTile(int x, int y)
-        {
-            if (x < 0 || x >= gridBase.maxXSize || y < 0 || y >= gridBase.maxYSize) return default;
+            if (x < 0 || x >= GridBase.maxSize || y < 0 || y >= GridBase.maxSize) return default;
             return tiles[x, y];
         }
     }

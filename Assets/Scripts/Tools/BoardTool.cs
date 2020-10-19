@@ -1,32 +1,19 @@
 ﻿using System;
 using GameDataStructures.Positioning;
 using LevelEditor.Saving;
-using LevelEditor.Tilemaps;
 using UnityEngine;
 
 namespace LevelEditor.Tools
 {
-    public class BoardTool : DesignTool
+    public class BoardTool : MonoBehaviour
     {
         [SerializeField] private new Camera camera;
         [SerializeField] private float moveSpeed;
         [SerializeField] private BackgroundManager backgroundManager;
         public static Action<VectorTwo> resizeCallback;
 
-
-        public override void Initialize(GridBase _)
-        {
-            
-        }
-
-        public override void Resize()
-        {
-            
-        }
-
         private void Update()
         {
-            if (!Enabled) return;
             if (Input.GetKey(KeyCode.LeftControl))
             {
                 ResizeGrid();
@@ -67,20 +54,20 @@ namespace LevelEditor.Tools
             if (Input.GetKey(KeyCode.Equals)) camera.orthographicSize -= moveSpeed;
         }
 
-        public override void Save()
+        public void Save()
         {
             BoardDto dto = new BoardDto()
             {
-                background = LevelConfiguration.background, 
+                background = LevelConfig.background, 
                 offset = camera.transform.position,
                 cameraSize = camera.orthographicSize
             };
-            Saver.Save(LevelConfiguration.name + "/board", dto);
+            Saver.Save(LevelConfig.name + "/board", dto);
         }
 
-        public override void Load()
+        public void Load()
         {
-            BoardDto dto = Saver.Read<BoardDto>(LevelConfiguration.name + "/board");
+            BoardDto dto = Saver.Read<BoardDto>(LevelConfig.name + "/board");
             camera.orthographicSize = dto.cameraSize;
             camera.transform.position = dto.offset;
             backgroundManager.SetBackground(dto.background);

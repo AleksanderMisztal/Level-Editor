@@ -7,7 +7,8 @@ namespace LevelEditor
 {
     public class Initializer : MonoBehaviour
     {
-        private DesignTool[] tools;
+        [SerializeField] private HexTool[] tools;
+        private BoardTool boardTool;
         private int activeTool;
 
         private GridBase gridBase;
@@ -18,40 +19,47 @@ namespace LevelEditor
 
         private void Start()
         {
-            gridBase = new GridBase(30, 30, cellSize);
+            gridBase = new GridBase(cellSize);
             camera = Camera.main;
-            tools = FindObjectsOfType<DesignTool>();
-            foreach (DesignTool tool in tools) tool.Initialize(gridBase);
+            foreach (HexTool tool in tools) tool.Initialize(gridBase);
+            boardTool = GetComponent<BoardTool>();
             tools[0].Enabled = true;
             BoardTool.resizeCallback = v => Resize(xSize + v.X, ySize + v.Y);
 
-            if (LevelConfiguration.isLoaded) Load();
+            if (LevelConfig.isLoaded) Load();
+            else Save();
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.T)) NextTool();
-            if (Input.GetKeyDown(KeyCode.S))
-                foreach (DesignTool tool in tools)
-                    tool.Save();
+            if (Input.GetKeyDown(KeyCode.S)) Save();
             if (Input.GetKeyDown(KeyCode.L)) Load();
+        }
+
+        private void Save()
+        {
+            boardTool.Save();
+            foreach (HexTool tool in tools)
+                tool.Save();
         }
 
         private void Load()
         {
-            GridDto dto = Saver.Read<GridDto>(LevelConfiguration.name + "/troops");
+            GridDto dto = Saver.Read<GridDto>(LevelConfig.name + "/troops");
             Resize(dto.xSize, dto.ySize);
-            foreach (DesignTool tool in tools)
+            boardTool.Load();
+            foreach (HexTool tool in tools)
                 tool.Load();
         }
 
         private void Resize(int newX, int newY)
         {
-            if (newX < 5 || newX >= gridBase.maxXSize || newY < 5 || newY >= gridBase.maxYSize) return;
+            if (newX < 5 || newX >= GridBase.maxSize || newY < 5 || newY >= GridBase.maxSize) return;
             xSize = newX;
             ySize = newY;
             gridBase.Redraw(newX, newY);
-            foreach (DesignTool tool in tools) tool.Resize();
+            foreach (HexTool tool in tools) tool.Resize();
         }
 
         private void NextTool()

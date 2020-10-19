@@ -42,15 +42,15 @@ namespace LevelEditor.Scenes
 
         private void LoadLevel(string level)
         {
-            LevelConfiguration.name = level;
-            LevelConfiguration.isLoaded = true;
+            LevelConfig.name = level;
+            LevelConfig.isLoaded = true;
             TransitionToEditing();
         }
 
         public void TransitionToNewLevel()
         {
-            LevelConfiguration.name = levelName.text;
-            LevelConfiguration.background = background.text;
+            LevelConfig.name = levelName.text;
+            LevelConfig.background = background.text;
             TransitionToEditing();
         }
 

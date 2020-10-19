@@ -60,7 +60,7 @@
           </e>
           <e p="Tools" t="Include">
             <e p="BoardTool.cs" t="Include" />
-            <e p="DesignTool.cs" t="Include" />
+            <e p="HexTool.cs" t="Include" />
             <e p="TerrainTool.cs" t="Include" />
             <e p="TroopTool.cs" t="Include" />
           </e>

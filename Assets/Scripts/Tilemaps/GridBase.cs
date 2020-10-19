@@ -6,24 +6,20 @@ namespace LevelEditor.Tilemaps
 {
     public class GridBase
     {
-        public int XSize { get; private set; }
-        public int YSize { get; private set; }
-        public readonly int maxXSize;
-        public readonly int maxYSize;
+        private const int initialSize = 10;
+        public const int maxSize = 100;
+        public int XSize { get; private set; } = initialSize;
+        public int YSize { get; private set; } = initialSize;
         private readonly float cellSize;
         
         public List<VectorTwo> newReachable;
         public List<VectorTwo> newUnreachable;
-        private GameObject[,] tiles; 
+        private readonly GameObject[,] tiles; 
 
-        public GridBase(int xSize, int ySize, float cellSize)
+        public GridBase(float cellSize)
         {
-            XSize = xSize;
-            YSize = ySize;
-            maxXSize = xSize;
-            maxYSize = ySize;
             this.cellSize = cellSize;
-            tiles = new GameObject[xSize, ySize];
+            tiles = new GameObject[maxSize, maxSize];
 
             DrawTiles();
         }
@@ -63,11 +59,13 @@ namespace LevelEditor.Tilemaps
         
         private void DrawTiles()
         {
-            for (int x = 0; x < XSize; x++)
-            for (int y = 0; y < YSize; y++)
+            for (int x = 0; x < maxSize; x++)
+            for (int y = 0; y < maxSize; y++)
             {
                 Vector3 center = Cube.FromOffset(x, y).ToWorld(cellSize);
-                tiles[x, y] = LineDrawer.DrawHex(center, cellSize);
+                GameObject tile = LineDrawer.DrawHex(center, cellSize);
+                tiles[x, y] = tile;
+                if (!IsInside(x, y)) tile.SetActive(false);
             }
         }
 

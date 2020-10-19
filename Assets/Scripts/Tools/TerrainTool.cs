@@ -8,7 +8,7 @@ using Terrain = LevelEditor.Tilemaps.Terrain;
 
 namespace LevelEditor.Tools
 {
-    public class TerrainTool : DesignTool
+    public class TerrainTool : HexTool
     {
         [FormerlySerializedAs("terrains")] [SerializeField] private Terrain[] templates;
         private int activeId;
@@ -73,13 +73,13 @@ namespace LevelEditor.Tools
 
         public override void Load()
         {
-            GridDto dto = Saver.Read<GridDto>(LevelConfiguration.name + "/terrains");
+            GridDto dto = Saver.Read<GridDto>(LevelConfig.name + "/terrains");
             terrainGrid.Load(dto);
         }
 
         public override void Save()
         {
-            Saver.Save(LevelConfiguration.name + "/terrains", terrainGrid.Dto());
+            Saver.Save(LevelConfig.name + "/terrains", terrainGrid.Dto());
         }
     }
 }

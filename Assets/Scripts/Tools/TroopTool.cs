@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 namespace LevelEditor.Tools
 {
-    public class TroopTool : DesignTool
+    public class TroopTool : HexTool
     {
         [FormerlySerializedAs("troopTemplates")] [SerializeField] private TroopTemplate[] templates;
         private int activeId;
@@ -74,13 +74,13 @@ namespace LevelEditor.Tools
 
         public override void Load()
         {
-            GridDto dto = Saver.Read<GridDto>(LevelConfiguration.name + "/troops");
+            GridDto dto = Saver.Read<GridDto>(LevelConfig.name + "/troops");
             troopGrid.Load(dto);
         }
 
         public override void Save()
         {
-            Saver.Save(LevelConfiguration.name + "/troops", troopGrid.Dto());
+            Saver.Save(LevelConfig.name + "/troops", troopGrid.Dto());
         }
     }
 }
