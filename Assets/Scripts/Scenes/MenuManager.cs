@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,7 +17,7 @@ namespace LevelEditor.Scenes
 
         public void DisplayLoadableLevels()
         {
-            string[] levels = GetDirs();
+            IEnumerable<string> levels = GetDirs();
             foreach (string level in levels)
             {
                 string currentLevel = level.Split('/').Last();
@@ -27,7 +28,7 @@ namespace LevelEditor.Scenes
             }
         }
         
-        private static string[] GetDirs()
+        private static IEnumerable<string> GetDirs()
         {
             string path = Application.dataPath + "/Saves/";
             try

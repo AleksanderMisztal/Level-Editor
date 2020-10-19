@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace LevelEditor
+namespace LevelEditor.Tools
 {
     public class BackgroundManager : MonoBehaviour
     {

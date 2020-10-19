@@ -11,9 +11,9 @@ namespace LevelEditor.Tools
         [SerializeField] private BackgroundManager backgroundManager;
         private ResizableGridBase gridBase;
 
-        public void Initialize(ResizableGridBase gridBase)
+        public void Initialize(ResizableGridBase theGridBase)
         {
-            this.gridBase = gridBase;
+            gridBase = theGridBase;
         }
 
         private void Update()
@@ -62,11 +62,11 @@ namespace LevelEditor.Tools
         
         public void Save()
         {
-            BoardDto dto = new BoardDto()
+            BoardDto dto = new BoardDto
             {
                 background = LevelConfig.background, 
                 offset = camera.transform.position,
-                cameraSize = camera.orthographicSize
+                cameraSize = camera.orthographicSize,
             };
             Saver.Save(LevelConfig.name + "/board", dto);
         }

@@ -62,8 +62,8 @@ namespace LevelEditor.Tools
                 hexGrid.SetTile(position, CreateObject(position, templates[activeId]));
             }
         }
-        
-        public override void Resize()
+
+        private void Resize()
         {
             foreach (VectorTwo v in gridBase.newReachable)
             {

@@ -7,7 +7,6 @@ namespace LevelEditor.Tools
     {
         public abstract bool Enabled { protected get; set; }
         public abstract void Initialize(ResizableGridBase theGridBase);
-        public abstract void Resize();
         public abstract void Load();
         public abstract void Save();
     }

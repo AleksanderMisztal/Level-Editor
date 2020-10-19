@@ -45,7 +45,7 @@ namespace LevelEditor.Tilemaps
                 gridTiles.Add(tiles[x, y]?.name);
             }
 
-            return new GridDto() {xSize = gridBase.XSize, ySize = gridBase.YSize, objects = gridTiles.ToArray()};
+            return new GridDto {xSize = gridBase.XSize, ySize = gridBase.YSize, objects = gridTiles.ToArray()};
         }
     }
 }

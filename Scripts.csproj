@@ -58,7 +58,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BackgroundManager.cs" />
      <Compile Include="Assets\Scripts\Initializer.cs" />
      <Compile Include="Assets\Scripts\LevelConfig.cs" />
      <Compile Include="Assets\Scripts\Saving\BoardDto.cs" />
@@ -66,15 +65,16 @@
      <Compile Include="Assets\Scripts\Saving\Saver.cs" />
      <Compile Include="Assets\Scripts\Scenes\MenuManager.cs" />
      <Compile Include="Assets\Scripts\Terrains\Terrain.cs" />
-     <Compile Include="Assets\Scripts\TextCreator.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\Cube.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\HexGrid.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\LineDrawer.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\ResizableGridBase.cs" />
+     <Compile Include="Assets\Scripts\Tools\BackgroundManager.cs" />
      <Compile Include="Assets\Scripts\Tools\BoardTool.cs" />
      <Compile Include="Assets\Scripts\Tools\HexTool.cs" />
      <Compile Include="Assets\Scripts\Tools\IHexTool.cs" />
      <Compile Include="Assets\Scripts\Tools\TerrainTool.cs" />
+     <Compile Include="Assets\Scripts\Tools\TextCreator.cs" />
      <Compile Include="Assets\Scripts\Tools\TroopTool.cs" />
      <Compile Include="Assets\Scripts\Troops\BomberTemplate.cs" />
      <Compile Include="Assets\Scripts\Troops\FighterTemplate.cs" />

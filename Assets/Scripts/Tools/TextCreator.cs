@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LevelEditor
+namespace LevelEditor.Tools
 {
     public static class TextCreator
     {

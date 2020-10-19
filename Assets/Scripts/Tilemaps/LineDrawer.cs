@@ -5,7 +5,7 @@ namespace LevelEditor.Tilemaps
 {
     public static class LineDrawer
     {
-        public static GameObject DrawHex(Vector3 center, float size, Color color)
+        public static GameObject DrawHex(Vector3 center, float size)
         {
             LineRenderer lineRenderer = new GameObject().AddComponent<LineRenderer>();
             Vector3 left = Vector3.left * size;
@@ -24,7 +24,5 @@ namespace LevelEditor.Tilemaps
             lineRenderer.SetPositions(positions);
             return lineRenderer.gameObject;
         }
-        
-        public static GameObject DrawHex(Vector3 center, float size) => DrawHex(center, size, Color.white);
     }
 }

@@ -10,33 +10,6 @@
           <e p="TroopEditor.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="BackgroundManager.cs" t="Include" />
-          <e p="CodeMonkey" t="Include">
-            <e p="Assets.cs" t="Include" />
-            <e p="CMDebug.cs" t="Include" />
-            <e p="MonoBehaviours" t="Include">
-              <e p="CameraFollow.cs" t="Include" />
-              <e p="CameraFollowSetup.cs" t="Include" />
-              <e p="ComponentActions.cs" t="Include" />
-              <e p="PositionRendererSorter.cs" t="Include" />
-            </e>
-            <e p="README.txt" t="Include" />
-            <e p="Utils" t="Include">
-              <e p="Button_Sprite.cs" t="Include" />
-              <e p="Button_UI.cs" t="Include" />
-              <e p="FunctionPeriodic.cs" t="Include" />
-              <e p="FunctionTimer.cs" t="Include" />
-              <e p="FunctionUpdater.cs" t="Include" />
-              <e p="UI_Bar.cs" t="Include" />
-              <e p="UI_BarMultiple.cs" t="Include" />
-              <e p="UI_Sprite.cs" t="Include" />
-              <e p="UI_TextComplex.cs" t="Include" />
-              <e p="UtilsClass.cs" t="Include" />
-              <e p="World_Bar.cs" t="Include" />
-              <e p="World_Mesh.cs" t="Include" />
-              <e p="World_Sprite.cs" t="Include" />
-            </e>
-          </e>
           <e p="Initializer.cs" t="Include" />
           <e p="LevelConfig.cs" t="Include" />
           <e p="Saving" t="Include">
@@ -58,10 +31,12 @@
             <e p="ResizableGridBase.cs" t="Include" />
           </e>
           <e p="Tools" t="Include">
+            <e p="BackgroundManager.cs" t="Include" />
             <e p="BoardTool.cs" t="Include" />
             <e p="HexTool.cs" t="Include" />
             <e p="IHexTool.cs" t="Include" />
             <e p="TerrainTool.cs" t="Include" />
+            <e p="TextCreator.cs" t="Include" />
             <e p="TroopTool.cs" t="Include" />
           </e>
           <e p="Troops" t="Include">
