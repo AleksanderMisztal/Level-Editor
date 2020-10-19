@@ -11,15 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f84b617d-22f9-4ff7-ba47-c2b2f1ce010d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/BackgroundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/BackgroundManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/MenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TextCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TextCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TextCreator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/TextCreator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/BoardTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/BoardTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/HexTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/HexTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/IHexTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/IHexTool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level Editor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Me262.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Me262.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Me262U.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Me262U.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/liberatorUtrans.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/liberatorUtrans.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/liberatortrans.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/liberatortrans.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,19 +88,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TroopTool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/ResizableGridBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/HexTool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CodeMonkey/Assets.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CodeMonkey/Utils/UI_Sprite.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TextCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TerrainTool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/TextCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scenes/MenuManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/BoardTool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/IHexTool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/LineDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/HexGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/HexTool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/BoardTool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/LineDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemaps/GridBase.cs" />
       </list>
     </option>
   </component>
@@ -165,7 +168,7 @@
       <workItem from="1602515441104" duration="18868000" />
       <workItem from="1602770116752" duration="30993000" />
       <workItem from="1602927496799" duration="23055000" />
-      <workItem from="1603117635646" duration="9387000" />
+      <workItem from="1603117635646" duration="10912000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1602526688119</created>
@@ -279,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603130352059</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fix code issues">
+      <created>1603130931389</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1603130931389</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +322,8 @@
     <MESSAGE value="Load images at runtime" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Remove code monkey" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove code monkey" />
+    <MESSAGE value="Fix code issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix code issues" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="126" key="RiderGenerateDialog" timestamp="1602948497543">

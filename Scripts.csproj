@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Scenes\MenuManager.cs" />
      <Compile Include="Assets\Scripts\Terrains\Terrain.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\Cube.cs" />
+     <Compile Include="Assets\Scripts\Tilemaps\GridBase.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\HexGrid.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\LineDrawer.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\ResizableGridBase.cs" />

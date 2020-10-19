@@ -26,6 +26,7 @@
           </e>
           <e p="Tilemaps" t="Include">
             <e p="Cube.cs" t="Include" />
+            <e p="GridBase.cs" t="Include" />
             <e p="HexGrid.cs" t="Include" />
             <e p="LineDrawer.cs" t="Include" />
             <e p="ResizableGridBase.cs" t="Include" />
