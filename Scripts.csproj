@@ -84,14 +84,11 @@
      <Compile Include="Assets\Scripts\Saving\GridDto.cs" />
      <Compile Include="Assets\Scripts\Saving\Saver.cs" />
      <Compile Include="Assets\Scripts\Scenes\MenuManager.cs" />
+     <Compile Include="Assets\Scripts\Terrains\Terrain.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\Cube.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\GridBase.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\HexGrid.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\LineDrawer.cs" />
-     <Compile Include="Assets\Scripts\Tilemaps\Terrain.cs" />
-     <Compile Include="Assets\Scripts\Tilemaps\TerrainGrid.cs" />
-     <Compile Include="Assets\Scripts\Tilemaps\TextGrid.cs" />
-     <Compile Include="Assets\Scripts\Tilemaps\TroopGrid.cs" />
      <Compile Include="Assets\Scripts\Tools\BoardTool.cs" />
      <Compile Include="Assets\Scripts\Tools\HexTool.cs" />
      <Compile Include="Assets\Scripts\Tools\TerrainTool.cs" />

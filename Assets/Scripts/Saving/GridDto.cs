@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine.Serialization;
 
 namespace LevelEditor.Saving
 {
@@ -7,6 +8,6 @@ namespace LevelEditor.Saving
     {
         public int xSize;
         public int ySize;
-        public string[] data;
+        [FormerlySerializedAs("data")] public string[] objects;
     }
 }

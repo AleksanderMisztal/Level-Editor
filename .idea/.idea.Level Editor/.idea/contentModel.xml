@@ -38,7 +38,7 @@
             </e>
           </e>
           <e p="Initializer.cs" t="Include" />
-          <e p="LevelConfiguration.cs" t="Include" />
+          <e p="LevelConfig.cs" t="Include" />
           <e p="Saving" t="Include">
             <e p="BoardDto.cs" t="Include" />
             <e p="GridDto.cs" t="Include" />
@@ -48,15 +48,14 @@
             <e p="MenuManager.cs" t="Include" />
           </e>
           <e p="Scripts.asmdef" t="Include" />
+          <e p="Terrains" t="Include">
+            <e p="Terrain.cs" t="Include" />
+          </e>
           <e p="Tilemaps" t="Include">
             <e p="Cube.cs" t="Include" />
             <e p="GridBase.cs" t="Include" />
             <e p="HexGrid.cs" t="Include" />
             <e p="LineDrawer.cs" t="Include" />
-            <e p="Terrain.cs" t="Include" />
-            <e p="TerrainGrid.cs" t="Include" />
-            <e p="TextGrid.cs" t="Include" />
-            <e p="TroopGrid.cs" t="Include" />
           </e>
           <e p="Tools" t="Include">
             <e p="BoardTool.cs" t="Include" />
