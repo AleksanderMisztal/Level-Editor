@@ -59,25 +59,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BackgroundManager.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Assets.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\CMDebug.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\MonoBehaviours\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\MonoBehaviours\PositionRendererSorter.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\Button_Sprite.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\Button_UI.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\FunctionPeriodic.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\FunctionTimer.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\FunctionUpdater.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\UI_Bar.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\UI_BarMultiple.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\UI_Sprite.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\UI_TextComplex.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\UtilsClass.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\World_Bar.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\World_Mesh.cs" />
-     <Compile Include="Assets\Scripts\CodeMonkey\Utils\World_Sprite.cs" />
      <Compile Include="Assets\Scripts\Initializer.cs" />
      <Compile Include="Assets\Scripts\LevelConfig.cs" />
      <Compile Include="Assets\Scripts\Saving\BoardDto.cs" />
@@ -85,10 +66,11 @@
      <Compile Include="Assets\Scripts\Saving\Saver.cs" />
      <Compile Include="Assets\Scripts\Scenes\MenuManager.cs" />
      <Compile Include="Assets\Scripts\Terrains\Terrain.cs" />
+     <Compile Include="Assets\Scripts\TextCreator.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\Cube.cs" />
-     <Compile Include="Assets\Scripts\Tilemaps\GridBase.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\HexGrid.cs" />
      <Compile Include="Assets\Scripts\Tilemaps\LineDrawer.cs" />
+     <Compile Include="Assets\Scripts\Tilemaps\ResizableGridBase.cs" />
      <Compile Include="Assets\Scripts\Tools\BoardTool.cs" />
      <Compile Include="Assets\Scripts\Tools\HexTool.cs" />
      <Compile Include="Assets\Scripts\Tools\IHexTool.cs" />
@@ -97,7 +79,6 @@
      <Compile Include="Assets\Scripts\Troops\BomberTemplate.cs" />
      <Compile Include="Assets\Scripts\Troops\FighterTemplate.cs" />
      <Compile Include="Assets\Scripts\Troops\TroopTemplate.cs" />
-     <None Include="Assets\Scripts\CodeMonkey\README.txt" />
      <None Include="Assets\Scripts\Scripts.asmdef" />
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/aleks/Projects/TS Games/Level Editor/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

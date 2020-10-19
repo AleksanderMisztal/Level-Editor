@@ -1,5 +1,4 @@
-﻿using LevelEditor.CodeMonkey.Utils;
-using UnityEngine;
+﻿using UnityEngine;
 using Terrain = LevelEditor.Terrains.Terrain;
 
 namespace LevelEditor.Tools
@@ -12,7 +11,7 @@ namespace LevelEditor.Tools
 
         protected override GameObject CreateObject(Vector3 position, Terrain template)
         {
-            GameObject go = UtilsClass.CreateWorldText(template.name, null, position).gameObject;
+            GameObject go = TextCreator.CreateWorldText(template.name, null, position).gameObject;
             go.name = template.name;
             return go;
         }
