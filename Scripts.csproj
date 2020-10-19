@@ -91,6 +91,7 @@
      <Compile Include="Assets\Scripts\Tilemaps\LineDrawer.cs" />
      <Compile Include="Assets\Scripts\Tools\BoardTool.cs" />
      <Compile Include="Assets\Scripts\Tools\HexTool.cs" />
+     <Compile Include="Assets\Scripts\Tools\IHexTool.cs" />
      <Compile Include="Assets\Scripts\Tools\TerrainTool.cs" />
      <Compile Include="Assets\Scripts\Tools\TroopTool.cs" />
      <Compile Include="Assets\Scripts\Troops\BomberTemplate.cs" />

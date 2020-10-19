@@ -24,12 +24,10 @@ namespace LevelEditor
             LevelConfig.background = imageName;
             Texture2D texture = new Texture2D(4, 4, TextureFormat.DXT1, false);
             string url = GetLocation(imageName);
-            Debug.Log("Url is " + url);
             WWW www = new WWW(url);
             yield return www;
             www.LoadImageIntoTexture(texture);
             GetComponent<Image>().sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
-            Debug.Log("Sprite set!");
         }
     }
 }

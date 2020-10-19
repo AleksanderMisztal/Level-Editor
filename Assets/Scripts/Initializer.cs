@@ -12,19 +12,15 @@ namespace LevelEditor
         private int activeTool;
 
         private GridBase gridBase;
-        private new static Camera camera;
         private const float cellSize = 10f;
-
-        private int xSize = 10, ySize = 10;
 
         private void Start()
         {
             gridBase = new GridBase(cellSize);
-            camera = Camera.main;
-            foreach (HexTool tool in tools) tool.Initialize(gridBase);
             boardTool = GetComponent<BoardTool>();
+            boardTool.Initialize(gridBase);
+            foreach (HexTool tool in tools) tool.Initialize(gridBase);
             tools[0].Enabled = true;
-            BoardTool.resizeCallback = v => Resize(xSize + v.X, ySize + v.Y);
 
             if (LevelConfig.isLoaded) Load();
             else Save();
@@ -47,19 +43,10 @@ namespace LevelEditor
         private void Load()
         {
             GridDto dto = Saver.Read<GridDto>(LevelConfig.name + "/troops");
-            Resize(dto.xSize, dto.ySize);
+            gridBase.Resize(dto.xSize, dto.ySize);
             boardTool.Load();
             foreach (HexTool tool in tools)
                 tool.Load();
-        }
-
-        private void Resize(int newX, int newY)
-        {
-            if (newX < 5 || newX >= GridBase.maxSize || newY < 5 || newY >= GridBase.maxSize) return;
-            xSize = newX;
-            ySize = newY;
-            gridBase.Redraw(newX, newY);
-            foreach (HexTool tool in tools) tool.Resize();
         }
 
         private void NextTool()
@@ -67,19 +54,6 @@ namespace LevelEditor
             tools[activeTool++].Enabled = false;
             if (activeTool >= tools.Length) activeTool -= tools.Length;
             tools[activeTool].Enabled = true;
-        }
-
-        private static Vector3 GetMouseWorldPosition()
-        {
-            Vector3 wp = camera.ScreenToWorldPoint(Input.mousePosition);
-            wp.z = 0;
-            return wp;
-        }
-
-        public static Vector3 GetHexCenterWp()
-        {
-            Vector3 wp = GetMouseWorldPosition();
-            return Cube.ToCube(wp, cellSize).ToWorld(cellSize);
         }
     }
 }

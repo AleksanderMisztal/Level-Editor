@@ -1,6 +1,5 @@
-﻿using System;
-using GameDataStructures.Positioning;
-using LevelEditor.Saving;
+﻿using LevelEditor.Saving;
+using LevelEditor.Tilemaps;
 using UnityEngine;
 
 namespace LevelEditor.Tools
@@ -10,7 +9,12 @@ namespace LevelEditor.Tools
         [SerializeField] private new Camera camera;
         [SerializeField] private float moveSpeed;
         [SerializeField] private BackgroundManager backgroundManager;
-        public static Action<VectorTwo> resizeCallback;
+        private GridBase gridBase;
+
+        public void Initialize(GridBase gridBase)
+        {
+            this.gridBase = gridBase;
+        }
 
         private void Update()
         {
@@ -24,17 +28,8 @@ namespace LevelEditor.Tools
                 AdjustCameraSize();
             }
         }
-
-        private void AdjustCameraPosition()
-        {
-            Vector3 dp = Vector3.zero;
-            if (Input.GetKey(KeyCode.DownArrow)) dp -= Vector3.down;
-            if (Input.GetKey(KeyCode.UpArrow)) dp -= Vector3.up;
-            if (Input.GetKey(KeyCode.LeftArrow)) dp -= Vector3.left;
-            if (Input.GetKey(KeyCode.RightArrow)) dp -= Vector3.right;
-            camera.transform.position += dp * moveSpeed;
-        }
-        private static void ResizeGrid()
+        
+        private void ResizeGrid()
         {
             int dx = 0;
             int dy = 0;
@@ -45,7 +40,17 @@ namespace LevelEditor.Tools
 
             if (dx == 0 && dy == 0) return;
             
-            resizeCallback(new VectorTwo(dx, dy));
+            gridBase.ResizeByDelta(dx, dy);
+        }
+
+        private void AdjustCameraPosition()
+        {
+            Vector3 dp = Vector3.zero;
+            if (Input.GetKey(KeyCode.DownArrow)) dp -= Vector3.down;
+            if (Input.GetKey(KeyCode.UpArrow)) dp -= Vector3.up;
+            if (Input.GetKey(KeyCode.LeftArrow)) dp -= Vector3.left;
+            if (Input.GetKey(KeyCode.RightArrow)) dp -= Vector3.right;
+            camera.transform.position += dp * moveSpeed;
         }
 
         private void AdjustCameraSize()
@@ -54,6 +59,7 @@ namespace LevelEditor.Tools
             if (Input.GetKey(KeyCode.Equals)) camera.orthographicSize -= moveSpeed;
         }
 
+        
         public void Save()
         {
             BoardDto dto = new BoardDto()

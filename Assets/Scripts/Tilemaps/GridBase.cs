@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using GameDataStructures.Positioning;
 using UnityEngine;
 
@@ -11,20 +12,32 @@ namespace LevelEditor.Tilemaps
         public int XSize { get; private set; } = initialSize;
         public int YSize { get; private set; } = initialSize;
         private readonly float cellSize;
+
+        public event Action gridResized;
         
         public List<VectorTwo> newReachable;
         public List<VectorTwo> newUnreachable;
-        private readonly GameObject[,] tiles; 
+        private readonly GameObject[,] tiles;
+        private readonly Camera camera;
 
         public GridBase(float cellSize)
         {
             this.cellSize = cellSize;
             tiles = new GameObject[maxSize, maxSize];
+            camera = Camera.main;
 
             DrawTiles();
         }
 
-        public void Redraw(int newX, int newY)
+        public Vector3 GetHexCenterWp()
+        {
+            Vector3 wp = camera.ScreenToWorldPoint(Input.mousePosition);
+            wp.z = 0;
+            return Cube.ToCube(wp, cellSize).ToWorld(cellSize);
+        }
+
+        public void ResizeByDelta(int dx, int dy) => Resize(XSize + dx, YSize + dy);
+        public void Resize(int newX, int newY)
         {
             newReachable = new List<VectorTwo>();
             newUnreachable = new List<VectorTwo>();
@@ -55,6 +68,8 @@ namespace LevelEditor.Tilemaps
                 newUnreachable.Add(new VectorTwo(x, y));
                 tiles[x, y].SetActive(false);
             }
+            
+            gridResized?.Invoke();
         }
         
         private void DrawTiles()
