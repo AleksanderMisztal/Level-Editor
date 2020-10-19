@@ -11,12 +11,12 @@ namespace LevelEditor
         private BoardTool boardTool;
         private int activeTool;
 
-        private GridBase gridBase;
+        private ResizableGridBase gridBase;
         private const float cellSize = 10f;
 
         private void Start()
         {
-            gridBase = new GridBase(cellSize);
+            gridBase = new ResizableGridBase(cellSize);
             boardTool = GetComponent<BoardTool>();
             boardTool.Initialize(gridBase);
             foreach (HexTool tool in tools) tool.Initialize(gridBase);
@@ -33,6 +33,13 @@ namespace LevelEditor
             if (Input.GetKeyDown(KeyCode.L)) Load();
         }
 
+        private void NextTool()
+        {
+            tools[activeTool++].Enabled = false;
+            if (activeTool >= tools.Length) activeTool -= tools.Length;
+            tools[activeTool].Enabled = true;
+        }
+
         private void Save()
         {
             boardTool.Save();
@@ -47,13 +54,6 @@ namespace LevelEditor
             boardTool.Load();
             foreach (HexTool tool in tools)
                 tool.Load();
-        }
-
-        private void NextTool()
-        {
-            tools[activeTool++].Enabled = false;
-            if (activeTool >= tools.Length) activeTool -= tools.Length;
-            tools[activeTool].Enabled = true;
         }
     }
 }

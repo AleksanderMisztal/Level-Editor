@@ -6,7 +6,7 @@ namespace LevelEditor.Tools
 {
     public class TerrainTool : HexTool<Terrain>
     {
-        protected override string saveFileName => "terrains";
+        protected override string SaveFileName => "terrains";
         
         protected override string GetName(Terrain template) => template.name;
 

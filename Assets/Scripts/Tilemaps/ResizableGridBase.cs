@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace LevelEditor.Tilemaps
 {
-    public class GridBase
+    public class ResizableGridBase
     {
         private const int initialSize = 10;
         public const int maxSize = 100;
@@ -13,14 +13,14 @@ namespace LevelEditor.Tilemaps
         public int YSize { get; private set; } = initialSize;
         private readonly float cellSize;
 
-        public event Action gridResized;
+        public event Action GridResized;
         
         public List<VectorTwo> newReachable;
         public List<VectorTwo> newUnreachable;
         private readonly GameObject[,] tiles;
         private readonly Camera camera;
 
-        public GridBase(float cellSize)
+        public ResizableGridBase(float cellSize)
         {
             this.cellSize = cellSize;
             tiles = new GameObject[maxSize, maxSize];
@@ -69,7 +69,7 @@ namespace LevelEditor.Tilemaps
                 tiles[x, y].SetActive(false);
             }
             
-            gridResized?.Invoke();
+            GridResized?.Invoke();
         }
         
         private void DrawTiles()

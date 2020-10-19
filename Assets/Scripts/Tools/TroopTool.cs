@@ -5,7 +5,7 @@ namespace LevelEditor.Tools
 {
     public class TroopTool : HexTool<TroopTemplate>
     {
-        protected override string saveFileName => "troops";
+        protected override string SaveFileName => "troops";
         
         protected override string GetName(TroopTemplate template) => template.name;
 

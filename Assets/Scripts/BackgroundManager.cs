@@ -8,10 +8,9 @@ namespace LevelEditor
     {
         private static string GetLocation(string fileName) => Application.dataPath + "/Backgrounds/" + fileName;
 
-
         private void Start()
         {
-            StartCoroutine(Co_SetBackground(LevelConfig.background));
+            SetBackground(LevelConfig.background);
         }
 
         public void SetBackground(string imageName)

@@ -7,13 +7,13 @@ namespace LevelEditor.Tilemaps
 {
     public class HexGrid
     {
-        private readonly GridBase gridBase;
+        private readonly ResizableGridBase gridBase;
         private readonly GameObject[,] tiles;
 
-        public HexGrid(GridBase gridBase)
+        public HexGrid(ResizableGridBase gridBase)
         {
             this.gridBase = gridBase;
-            tiles = new GameObject[GridBase.maxSize, GridBase.maxSize];
+            tiles = new GameObject[ResizableGridBase.maxSize, ResizableGridBase.maxSize];
         }
 
         public void SetTile(Vector3 wp, GameObject tile)
@@ -32,7 +32,7 @@ namespace LevelEditor.Tilemaps
 
         public GameObject GetTile(int x, int y)
         {
-            if (x < 0 || x >= GridBase.maxSize || y < 0 || y >= GridBase.maxSize) return default;
+            if (x < 0 || x >= ResizableGridBase.maxSize || y < 0 || y >= ResizableGridBase.maxSize) return default;
             return tiles[x, y];
         }
         

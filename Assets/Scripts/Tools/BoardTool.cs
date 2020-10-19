@@ -9,9 +9,9 @@ namespace LevelEditor.Tools
         [SerializeField] private new Camera camera;
         [SerializeField] private float moveSpeed;
         [SerializeField] private BackgroundManager backgroundManager;
-        private GridBase gridBase;
+        private ResizableGridBase gridBase;
 
-        public void Initialize(GridBase gridBase)
+        public void Initialize(ResizableGridBase gridBase)
         {
             this.gridBase = gridBase;
         }

@@ -8,17 +8,17 @@ namespace LevelEditor.Tools
 {
     public abstract class HexTool<T> : HexTool where T : class
     {
-        protected abstract string saveFileName { get; }
+        protected abstract string SaveFileName { get; }
         
         // ReSharper disable once Unity.RedundantSerializeFieldAttribute
-        [SerializeField] protected T[] templates;
-        
-        protected readonly Dictionary<string, T> templateByName = new Dictionary<string, T>();
+        [SerializeField] private T[] templates;
+
+        private readonly Dictionary<string, T> templateByName = new Dictionary<string, T>();
         protected abstract string GetName(T template);
         private int activeId;
-        
-        protected HexGrid hexGrid;
-        protected GridBase gridBase;
+
+        private HexGrid hexGrid;
+        private ResizableGridBase gridBase;
         
         public override bool Enabled { protected get; set; }
 
@@ -35,11 +35,11 @@ namespace LevelEditor.Tools
             }
         }
         
-        public override void Initialize(GridBase gridBase)
+        public override void Initialize(ResizableGridBase theGridBase)
         {
-            gridBase.gridResized += Resize;
-            this.gridBase = gridBase;
-            hexGrid = new HexGrid(gridBase);
+            theGridBase.GridResized += Resize;
+            gridBase = theGridBase;
+            hexGrid = new HexGrid(theGridBase);
             foreach (T template in templates)
                 templateByName.Add(GetName(template), template);
         }
@@ -90,12 +90,12 @@ namespace LevelEditor.Tools
         
         public override void Save()
         {
-            Saver.Save(LevelConfig.name + "/" + saveFileName, hexGrid.Dto());
+            Saver.Save(LevelConfig.name + "/" + SaveFileName, hexGrid.Dto());
         }
         
         public override void Load()
         {
-            GridDto dto = Saver.Read<GridDto>(LevelConfig.name + "/" + saveFileName);
+            GridDto dto = Saver.Read<GridDto>(LevelConfig.name + "/" + SaveFileName);
             int id = 0;
             for (int y = 0; y < gridBase.YSize; y++)
             for (int x = 0; x < gridBase.XSize; x++)
